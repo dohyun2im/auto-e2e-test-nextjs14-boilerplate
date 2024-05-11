@@ -7,7 +7,15 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "lint-staged-husky": "lint-staged",
+        "playwright": "npx playwright test",
+        "test": "npm-run-all --parallel --race start playwright"
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "eslint --fix"
+        ]
     },
     "dependencies": {
         "next": "14.2.3",
@@ -15,6 +23,8 @@
         "react-dom": "^18"
     },
     "devDependencies": {
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
         "@playwright/test": "^1.44.0",
         "@types/node": "^20",
         "@types/react": "^18",
@@ -22,6 +32,7 @@
         "eslint": "^8",
         "eslint-config-next": "14.2.3",
         "husky": "^9.0.11",
+        "lint-staged": "^15.2.2",
         "npm-run-all": "^4.1.5",
         "typescript": "^5"
     }
