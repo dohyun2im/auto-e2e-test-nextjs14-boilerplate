@@ -14,7 +14,7 @@
 - `.github/workflows/ci_cd.yml` 파일에서 지정한 브랜치 명에 push되면 git workflows가 실행됩니다.
 - Dockfile을 기반으로 컨테이너 이미지를 ECR에 push합니다.
 
-### 주요 라이브러리
+## 주요 라이브러리
 
 - `husky`: git hook 관련 라이브러리
 - `playwright`: e2e test 라이브러리
