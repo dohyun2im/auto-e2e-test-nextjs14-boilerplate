@@ -5,25 +5,25 @@ const config: PlaywrightTestConfig = {
   use: {
     baseURL: "http://localhost:3000/",
     headless: true,
-    ignoreHTTPSErrors: true,
+    ignoreHTTPSErrors: true
   },
   projects: [
     {
       name: "Desktop Firefox",
-      use: { browserName: "firefox" },
+      use: { browserName: "firefox" }
     },
     {
       name: "Desktop Safari",
-      use: { browserName: "webkit" },
+      use: { browserName: "webkit" }
     },
     {
       name: "Desktop Chrome",
-      use: { browserName: "chromium" },
-    },
+      use: { browserName: "chromium" }
+    }
   ],
   testDir: "tests",
   testMatch: "*.test.ts",
-  workers: 3,
+  workers: 3
 };
 
 export default config;
