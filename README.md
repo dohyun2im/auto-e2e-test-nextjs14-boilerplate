@@ -7,7 +7,8 @@
 - 커밋 메시지를 자동으로 lint하는 기능을 제공합니다. (`commitlint`를 사용하며, `.commitlintrc.ts` 파일을 참고하세요.)
 - git hook을 활용하여 커밋 메시지 앞에 브랜치 이름을 prefix로 붙여줍니다. (예: `[main] Feature: 로그인`)
 - `lint-staged`를 사용하여 변경된 ts, tsx 파일의 lint를 자동화합니다.
-- git push 전에 Next.js 프로젝트를 빌드합니다.
+- git push 전에 `killall -9 node`을 통해 개발 서버가 있다면 종료합니다.
+- Next.js 프로젝트를 빌드합니다.
 - 빌드가 완료되면 `npm-run-all --parallel --race`으로 `start`와 `test`를 병렬로 실행합니다.
 - `--race` 옵션을 사용하여 먼저 마치는 작업이 있으면 프로세스가 종료됩니다.
 - 테스트가 성공하면 git push가 실행됩니다.
