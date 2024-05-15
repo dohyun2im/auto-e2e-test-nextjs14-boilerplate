@@ -1,8 +1,5 @@
-if [ "$(uname)" == "Darwin" ] || [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+if [ "$(uname)" == "Darwin" ]; then
 killall -9 node
-else
-taskkill /F /IM node.exe
 fi
-
 
 npm run build && npm run test
