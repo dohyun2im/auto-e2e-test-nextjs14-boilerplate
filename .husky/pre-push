@@ -1,9 +1,8 @@
-if [ "$(expr substr $(uname -s) 1 5)" = "MINGW" ]; then
+if [ "$(uname)" == "Darwin" ] || [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+killall -9 node
+else
 taskkill /F /IM node.exe
 fi
 
-if [ "$(uname)" == "Darwin" ] || [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
-killall -9 node
-fi
 
 npm run build && npm run test
