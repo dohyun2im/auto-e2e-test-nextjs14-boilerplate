@@ -1,7 +1,7 @@
 if [ "$(uname)" == "Darwin" ]; then
   if pgrep node >/dev/null; then
     killall -9 node
-    echo "Killed all 'node' processes."
+    echo "node 서버를 종료합니다."
   fi
 fi
 
