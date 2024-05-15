@@ -10,7 +10,7 @@
 
 - `lint-staged`를 사용하여 변경된 ts, tsx 파일의 lint를 자동화합니다.
 
-- git push 전에 `killall -9 node`을 통해 개발 서버가 있다면 종료합니다.
+- git push 전에 port:3000에서 실행 중인 개발 서버가 있다면 종료합니다.
 
 - Next.js 프로젝트를 빌드합니다.
 
