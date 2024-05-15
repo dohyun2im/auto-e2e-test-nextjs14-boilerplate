@@ -1,5 +1,0 @@
-if [ "$(uname)" == "Darwin" ]; then
-killall -9 node
-fi
-
-npm run build && npm run test
